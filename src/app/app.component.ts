@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {COURSES} from '../db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TestAngular';
+  coreCourse=COURSES[0];
+  RxJS = COURSES[1];
+  NgRx = COURSES[2];
+  kursevi=COURSES;
+
+  onClick(cr:Course){
+    console.log(cr);
+  }
+
 }

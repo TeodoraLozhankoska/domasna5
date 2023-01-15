@@ -1,0 +1,21 @@
+
+<div class="course-card" class="card-style">
+
+    <div class="course-title" [ngStyle]="styleTitle()">
+        {{crs.description}}
+
+    </div>
+    <img width="300" alt="Angular Logo"
+    src={{crs.iconUrl}}>
+
+    <div class="course-description" [ngStyle]="styleDesc()">
+       {{crs.longDescription}} 
+    </div>
+
+    <div [ngSwitch]="crs.category">
+        <div *ngSwitchCase="'BEGINNER'">This is a begginer course!</div>
+        <div *ngSwitchCase="'INTERMEDIATE'">This is an intermediate course!</div>
+        <div *ngSwitchCase="'ADVANCED'">This is an advanced course!</div>
+    </div>
+    <button (click)="onCrsViewed()">Click</button>
+</div>
